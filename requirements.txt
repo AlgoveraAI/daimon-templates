@@ -1,0 +1,6 @@
+python-dotenv
+pydantic
+fastapi
+uvicorn
+python-multipart
+celery
