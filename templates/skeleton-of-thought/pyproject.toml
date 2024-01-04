@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "skeleton-of-thought"
+version = "0.1.0"
+description = ""
+authors = ["moarshy <marshath@gmail.com>"]
+readme = "README.md"
+packages = [
+    { include = "skeleton_of_thought", from = "." },
+]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+langchain = "^0.0.354"
+openai = "^1.6.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

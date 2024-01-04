@@ -3,8 +3,8 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import RunnablePassthrough
 
-from schema import JobRequestSchema
-from utils import get_logger
+from skeleton_of_thought.schema import JobRequestSchema
+from skeleton_of_thought.utils import get_logger
 
 logger = get_logger(__name__)
 

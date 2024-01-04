@@ -1,8 +1,8 @@
 from langchain_core.runnables import RunnablePassthrough
-from search import chain as search_chain
-from writer import chain as writer_chain
-from utils import get_logger
-from schema import JobRequestSchema
+from research_assistant.search import chain as search_chain
+from research_assistant.writer import chain as writer_chain
+from research_assistant.utils import get_logger
+from research_assistant.schema import JobRequestSchema
 
 logger = get_logger(__name__)
 
@@ -23,3 +23,13 @@ def main(job: JobRequestSchema):
     logger.info(f"Finished job: {job}")
 
     return report
+
+
+if __name__ == "__main__":
+    import sys
+    sys.path.append("../")
+    job = JobRequestSchema(
+        question="What is the best way to learn a new language?",
+    )
+
+    print(main(job))

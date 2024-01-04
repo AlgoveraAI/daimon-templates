@@ -3,7 +3,7 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.runnables import ConfigurableField
 
-from prompt import (
+from research_assistant.prompt import (
     WRITER_SYSTEM_PROMPT,
     RESEARCH_REPORT_TEMPLATE,
     RESOURCE_REPORT_TEMPLATE,

@@ -11,8 +11,8 @@ from langchain_core.runnables import (
 )
 from langchain_core.output_parsers import StrOutputParser
 
-from prompt import SEARCH_PROMPT, CHOOSE_AGENT_PROMPT, SUMMARY_PROMPT
-from utils import load_json
+from research_assistant.prompt import SEARCH_PROMPT, CHOOSE_AGENT_PROMPT, SUMMARY_PROMPT
+from research_assistant.utils import load_json
 
 # Constants
 RESULTS_PER_QUESTION = 3
