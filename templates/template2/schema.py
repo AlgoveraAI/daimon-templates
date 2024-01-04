@@ -1,5 +1,6 @@
 from pydantic import BaseModel
 
+
 class JobRequestSchema(BaseModel):
     name: str
     description: str

@@ -7,6 +7,7 @@ from celery_worker import execute_job_task  # Import the Celery task directly
 logger = get_logger(__name__)
 app = FastAPI()
 
+
 @app.post("/execute-job")
 async def execute_job(job_request: JobRequest):
     template_name = job_request.template_name
@@ -14,8 +15,8 @@ async def execute_job(job_request: JobRequest):
 
     # Dynamically load JobRequestSchema
     try:
-        schemas_module = importlib.import_module(f'templates.{template_name}.schema')
-        JobRequestSchema = getattr(schemas_module, 'JobRequestSchema')
+        schemas_module = importlib.import_module(f"templates.{template_name}.schema")
+        JobRequestSchema = getattr(schemas_module, "JobRequestSchema")
     except (ImportError, AttributeError):
         raise HTTPException(status_code=404, detail="Template or schema not found")
 
@@ -29,4 +30,5 @@ async def execute_job(job_request: JobRequest):
 
 if __name__ == "__main__":
     import uvicorn
+
     uvicorn.run(app, host="0.0.0.0", port=8000)
