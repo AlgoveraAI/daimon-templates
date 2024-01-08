@@ -4,6 +4,9 @@ version = "0.1.0"
 description = ""
 authors = ["moarshy <marshath@gmail.com>"]
 readme = "README.md"
+packages = [
+    { include = "run_ollama", from = "." },
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
