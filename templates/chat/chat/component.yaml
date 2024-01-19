@@ -1,0 +1,16 @@
+name: chat
+description: A llego block that implements a simple chat assistant.
+author: Arshy <arshy@naptha.ai>
+version: 0.1.0
+type: ""
+license: MIT
+
+inputs:
+    system_message: You are a helpful assistant.
+    prompt: Tell me a joke
+    model: ollama/phi
+    api_base: http://localhost:11434
+
+implementation:
+    package:
+        entrypoint: component.py

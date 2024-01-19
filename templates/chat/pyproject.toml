@@ -1,18 +1,16 @@
 [tool.poetry]
-name = "run-ollama"
+name = "chat"
 version = "0.1.0"
 description = ""
-authors = ["moarshy <marshath@gmail.com>"]
+authors = ["moarshy <arshy@naptha.ai>"]
 readme = "README.md"
-packages = [
-    { include = "run_ollama", from = "." },
-]
 
 [tool.poetry.dependencies]
 python = "^3.10"
 requests = "^2.31.0"
 pydantic = "^2.5.3"
-
+pyyaml = "^6.0.1"
+litellm = "^1.18.4"
 
 [build-system]
 requires = ["poetry-core"]
