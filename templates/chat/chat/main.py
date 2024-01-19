@@ -9,7 +9,7 @@ import yaml
 
 logger = get_logger(__name__)
 
-def chat(input_: InputSchema):
+def main(input_: InputSchema):
 
     logger.info(f"Running job: {input_}")
 
@@ -41,4 +41,4 @@ if __name__ == "__main__":
         model=cfg["inputs"]["model"],
         api_base=cfg["inputs"]["api_base"],
     )
-    print(chat(input_))
+    print(main(input_))
