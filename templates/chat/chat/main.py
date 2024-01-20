@@ -3,13 +3,13 @@
 import json
 from litellm import completion
 import requests
-from schema import InputSchema
+from chat.schema import JobRequestSchema
 from utils import get_logger
 import yaml
 
 logger = get_logger(__name__)
 
-def main(input_: InputSchema):
+def main(input_: JobRequestSchema):
 
     logger.info(f"Running job: {input_}")
 
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     with open("chat/component.yaml", 'r') as cfg_file:
         cfg = yaml.safe_load(cfg_file)
 
-    input_ = InputSchema(
+    input_ = JobRequestSchema(
         prompt=cfg["inputs"]["prompt"],
         system_message=cfg["inputs"]["system_message"],
         model=cfg["inputs"]["model"],
