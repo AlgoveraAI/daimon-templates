@@ -4,7 +4,7 @@ import json
 from litellm import completion
 import requests
 from chat.schema import JobRequestSchema
-from utils import get_logger
+from chat.utils import get_logger
 import yaml
 
 logger = get_logger(__name__)
